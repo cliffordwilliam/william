@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { request } from "../store/apiSlice.js";
 import c from "../c";
 import SpotifyTrackPlayer from "../components/SpotifyTrackPlayer.jsx";
+import SongList from "../components/SongList";
 
 export default function Spotify() {
   const code = new URLSearchParams(window.location.search).get("code");
@@ -55,7 +56,6 @@ export default function Spotify() {
         albumUrl: track.album.images[0],
       };
     });
-    console.log(processedTracks);
     setTracks(processedTracks);
   }
   // GET TRACKS
@@ -87,6 +87,7 @@ export default function Spotify() {
       <section>
         <div className="📃">
           <form className="📃 💪">
+            {/* search */}
             <div className="💪1">
               <label className="📏f" htmlFor="search">
                 Search for tracks:
@@ -104,31 +105,7 @@ export default function Spotify() {
               />
             </div>
           </form>
-          {tracks.length > 0 ? (
-            <div className="👆7 👇5 🪟">
-              {tracks.map((track, index) => (
-                <div className="🃏 💪⬇️" key={index}>
-                  <img
-                    className="👇4 📏h4"
-                    src={track.albumUrl.url}
-                    alt={`Album cover for ${track.title}`}
-                  />
-                  <h3 className="👇2">{track.title}</h3>
-                  <p className="👇4">{track.artist}</p>
-                  <button
-                    className="🛎️ 👆a"
-                    onClick={(e) => {
-                      onTrackClicked(e, track.uri);
-                    }}
-                  >
-                    Play
-                  </button>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p>No tracks found</p>
-          )}
+          <SongList tracks={tracks} onTrackClicked={onTrackClicked} />
           <SpotifyTrackPlayer accessToken={accessToken} trackUri={uri} />
         </div>
       </section>

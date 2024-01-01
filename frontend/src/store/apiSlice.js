@@ -60,7 +60,6 @@ export function request({
     } catch (error) {
       console.log(error);
       if (error.response === undefined) {
-        console.log(error);
         dispatch(bad("error"));
       } else {
         dispatch(bad(error.response.data.message));

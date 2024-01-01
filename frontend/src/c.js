@@ -1,4 +1,3 @@
-console.log(window.location.origin);
 export default class c {
   static baseUrl = "http://localhost:3000";
   static baseFrontendUrl = window.location.origin;
