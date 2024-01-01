@@ -19,9 +19,9 @@ const router = createBrowserRouter([
       {
         element: <Private />,
         loader: () => {
-          if (!localStorage.token) {
-            return redirect("/register");
-          }
+          // if (!localStorage.token) {
+          //   return redirect("/register");
+          // }
           return null;
         },
         children: [
