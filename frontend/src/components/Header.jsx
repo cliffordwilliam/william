@@ -23,12 +23,6 @@ export default function Header({
     localStorage.removeItem("token");
     navigate("/login");
   }
-  // function lightDark() {
-  //   const body = document.querySelector("body");
-  //   const currentTheme = body.getAttribute("data-theme");
-  //   const newTheme = currentTheme === "light" ? "dark" : "light";
-  //   body.setAttribute("data-theme", newTheme);
-  // }
   return (
     <header className="🤍 🦶">
       <div className="📃 💪">

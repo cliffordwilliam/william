@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 export default function Dialog() {
   const { data, loading, error } = useSelector((state) => state.api);
   return (
-    <dialog className={`${loading ? "transparent" : ""}`}>
+    <dialog className={`${loading ? "transparent" : ""} fadeInUp`}>
       {data && <h2 className="👇2">Success</h2>}
       {error && <h2 className="👇2">Error</h2>}
       {loading && <div className="loader"></div>}

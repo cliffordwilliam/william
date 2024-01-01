@@ -11,6 +11,9 @@ import Register from "./pages/Register.jsx";
 import Login from "./pages/Login.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Spotify from "./pages/Spotify.jsx";
+import Scrapper from "./pages/Scrapper.jsx";
+import Youtube from "./pages/Youtube.jsx";
+import Channel from "./pages/Channel.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,9 +22,9 @@ const router = createBrowserRouter([
       {
         element: <Private />,
         loader: () => {
-          // if (!localStorage.token) {
-          //   return redirect("/register");
-          // }
+          if (!localStorage.token) {
+            return redirect("/register");
+          }
           return null;
         },
         children: [
@@ -32,6 +35,18 @@ const router = createBrowserRouter([
           {
             path: "/spotify",
             element: <Spotify />,
+          },
+          {
+            path: "/scrapper",
+            element: <Scrapper />,
+          },
+          {
+            path: "/youtube",
+            element: <Youtube />,
+          },
+          {
+            path: "/youtube/channel/:id",
+            element: <Channel />,
           },
         ],
       },

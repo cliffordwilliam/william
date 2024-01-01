@@ -7,7 +7,7 @@ import SongList from "../components/SongList";
 
 export default function Spotify() {
   const code = new URLSearchParams(window.location.search).get("code");
-  const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("lucky");
   const [tracks, setTracks] = useState([]);
   const [uri, setUri] = useState();
   const [accessToken, setAccessToken] = useState();
@@ -85,13 +85,13 @@ export default function Spotify() {
   return (
     <main>
       <section>
-        <div className="📃">
-          <form className="📃 💪">
+        <div className="📃 💪⬇️">
+          <h2 className="👇2">Spotify</h2>
+          <p className="👇4">Search and play any tracks you want here!</p>
+          <form className="💪 📏f">
             {/* search */}
             <div className="💪1">
-              <label className="📏f" htmlFor="search">
-                Search for tracks:
-              </label>
+              <label htmlFor="search">Search for tracks:</label>
               <input
                 className="📏f"
                 type="text"

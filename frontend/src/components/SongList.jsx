@@ -3,7 +3,7 @@ import SongCard from "./SongCard";
 
 const SongList = ({ tracks, onTrackClicked }) => {
   return (
-    <div className="👆7 👇5 🪟">
+    <div className="👆7 👇5 🪟 📏f fadeInUp">
       {tracks.length > 0 ? (
         tracks.map((track, index) => (
           <SongCard key={index} track={track} onTrackClicked={onTrackClicked} />

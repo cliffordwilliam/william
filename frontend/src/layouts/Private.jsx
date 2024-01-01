@@ -9,6 +9,8 @@ export default function Private() {
   const links = [
     { name: "Home", endpoint: "/" },
     { name: "Spotify", endpoint: c.baseSpotifyUrl },
+    { name: "Scrapper", endpoint: "/scrapper" },
+    { name: "Youtube", endpoint: "/youtube" },
   ];
   const sections = [
     {

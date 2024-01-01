@@ -14,7 +14,7 @@ export default function AuthForm({ title, fields, extraLink, callback }) {
     callback && callback(formData);
   };
   return (
-    <div className="📃">
+    <div className="📃 fadeInUp">
       <form className="📏6 📃 💪⬇️ 🃏" onSubmit={callCallback}>
         <h2 className="👇2">{title}</h2>
         <p className="👇4">

@@ -9,7 +9,7 @@ export default function Login() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   function saveToken(data) {
-    localStorage.setItem("token", data.access_token);
+    localStorage.setItem("token", data.token);
     navigate("/");
   }
   const postLogin = (formData) => {

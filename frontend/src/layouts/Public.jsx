@@ -6,7 +6,6 @@ import logo from "../assets/william-logo.svg";
 
 export default function Private() {
   const links = [
-    { name: "Home", endpoint: "/" },
     { name: "Sign up", endpoint: "/register" },
     { name: "Login", endpoint: "/login" },
   ];
