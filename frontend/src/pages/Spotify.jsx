@@ -37,7 +37,7 @@ export default function Spotify() {
             client_secret: "12fbed6aadfd45089db0787369dfd7df",
             grant_type: "authorization_code",
             code: code,
-            redirect_uri: `${c.baseUrl}/spotify`,
+            redirect_uri: `${c.baseFrontendUrl}/spotify`,
           },
         },
         isLoader: true,
