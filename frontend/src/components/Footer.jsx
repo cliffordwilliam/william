@@ -2,14 +2,14 @@ import React from "react";
 
 export default function Footer({
   sections = [],
-  logo = "https://picsum.photos/100",
+  logo = "https://picsum.photos/50",
   slogan = "No slogan yet.",
 }) {
   return (
-    <footer class="🤯 🤍">
-      <div class="📃">
-        <div class="🪟 👇4">
-          <div class="💪⬇️">
+    <footer className="🤯 🤍">
+      <div className="📃">
+        <div className="🪟 👇4">
+          <div className="💪⬇️">
             <a className="👉a 🔕" href="/">
               <img className="📏2 🖼️" src={logo} alt="logo" />
             </a>

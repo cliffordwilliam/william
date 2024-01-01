@@ -58,6 +58,7 @@ export function request({
         document.querySelector("dialog").showModal();
       }
     } catch (error) {
+      console.log(error);
       if (error.response === undefined) {
         console.log(error);
         dispatch(bad("error"));

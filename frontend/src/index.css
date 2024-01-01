@@ -47,7 +47,8 @@ h5,
 h6,
 ol,
 p,
-ul {
+ul,
+label {
   padding: 0;
   margin: 0;
   color: var(--text-color);
@@ -91,16 +92,18 @@ dialog[open] {
   width: min(100%, 40rem);
   border-radius: 0.5rem;
   box-shadow: 0 19px 38px var(--a4), 0 15px 12px var(--a3);
+  background-color: var(--l1);
 }
 dialog::backdrop {
-  background: var(--a8);
+  background-color: #000e;
 }
 html,
 body,
-#root {
+#root,
+.theme-con {
   min-height: 100vh;
 }
-#root {
+.theme-con {
   background: var(--l2);
   display: flex;
   flex-direction: column;
@@ -126,7 +129,7 @@ select {
   box-sizing: border-box;
   padding: 0.5rem 1rem;
   display: block;
-  border: 1px solid #ccc;
+  border: 1px solid var(--l4);
   border-radius: 0.5rem;
 }
 section {
@@ -141,7 +144,7 @@ section {
   cursor: pointer;
   border: 1px solid var(--button);
   background-color: var(--button);
-  color: #fff;
+  color: var(--l1);
   font-size: inherit;
   font-weight: inherit;
   padding: 0.5rem 1rem;
@@ -200,6 +203,11 @@ section {
 .💪1 {
   flex: 1 1 auto;
 }
+.🕛 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* margins */
 .👆 {
   margin-top: 0.25rem;
@@ -233,7 +241,7 @@ section {
 }
 /* card */
 .🃏 {
-  background-color: #fff;
+  background-color: var(--l1);
   border-radius: 0.5rem;
   padding: 2rem;
   box-shadow: 0 1px 3px var(--a1), 0 1px 2px var(--a3);
@@ -306,4 +314,26 @@ section {
   .📱 {
     display: block;
   }
+}
+.loader {
+  border: 1rem solid #eee;
+  border-top: 1rem solid #39d;
+  border-radius: 50%;
+  width: 8rem;
+  height: 8rem;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+dialog.transparent {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
 }

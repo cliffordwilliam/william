@@ -2,12 +2,15 @@ import React from "react";
 import williamLogo from "../assets/william-logo.svg";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useContext } from "react";
+import { themeContext } from "../context/ThemeContext";
 
 export default function Header({
   links = [],
   isLogout = false,
-  logo = "https://picsum.photos/100",
+  logo = "https://picsum.photos/50",
 }) {
+  const { currentTheme, handleTheme } = useContext(themeContext);
   const navigate = useNavigate();
   function open(e) {
     document.getElementById("m1").style.left = "0";
@@ -20,12 +23,12 @@ export default function Header({
     localStorage.removeItem("token");
     navigate("/login");
   }
-  function lightDark() {
-    const body = document.querySelector("body");
-    const currentTheme = body.getAttribute("data-theme");
-    const newTheme = currentTheme === "light" ? "dark" : "light";
-    body.setAttribute("data-theme", newTheme);
-  }
+  // function lightDark() {
+  //   const body = document.querySelector("body");
+  //   const currentTheme = body.getAttribute("data-theme");
+  //   const newTheme = currentTheme === "light" ? "dark" : "light";
+  //   body.setAttribute("data-theme", newTheme);
+  // }
   return (
     <header className="🤍 🦶">
       <div className="📃 💪">
@@ -54,8 +57,8 @@ export default function Header({
               </li>
             )}
             <li>
-              <button className="🛎️" onClick={lightDark}>
-                Light / Dark
+              <button className="🛎️" onClick={handleTheme}>
+                {currentTheme == "light" ? "Dark" : "Light"}
               </button>
             </li>
             <li>
