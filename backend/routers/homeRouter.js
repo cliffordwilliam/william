@@ -8,6 +8,7 @@ const UserController = require("../controllers/userController");
 const homeRouter = express.Router();
 // child
 const userRouter = require("./userRouter.js");
+const scrapperRouter = require("./scrapperRouter.js");
 
 // free
 homeRouter.post("/user", UserController.post);
@@ -15,6 +16,7 @@ homeRouter.post("/user/login", UserController.login);
 // token
 homeRouter.use(Middleware.tokenGuard);
 homeRouter.use("/user", userRouter);
+homeRouter.use("/scrapper", scrapperRouter);
 
 // export
 module.exports = homeRouter;
