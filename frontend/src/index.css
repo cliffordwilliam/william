@@ -1,36 +1,36 @@
 :root {
-  --a1: #0001;
-  --a2: #0002;
-  --a3: #0003;
-  --a4: #0004;
-  --a8: #0008;
-  --l1: #fff;
-  --l2: #eee;
-  --l3: #ddd;
-  --l4: #ccc;
+  --a1: #0011;
+  --a2: #0012;
+  --a3: #0013;
+  --a4: #0014;
+  --a8: #0018;
+  --l1: #eef;
+  --l2: #dde;
+  --l3: #ccd;
+  --l4: #bbc;
   --link: #14a;
   --button: #178;
   --button-hover: #087;
   --button-active: #096;
   --button-outline: #06f8;
-  --text-color: #000;
+  --text-color: #001;
 }
 [data-theme="dark"] {
-  --a1: #fff1;
-  --a2: #fff2;
-  --a3: #fff3;
-  --a4: #fff4;
-  --a8: #fff8;
-  --l1: #000;
-  --l2: #111;
-  --l3: #222;
-  --l4: #333;
+  --a1: #eef1;
+  --a2: #eef2;
+  --a3: #eef3;
+  --a4: #eef4;
+  --a8: #eef8;
+  --l1: #001;
+  --l2: #112;
+  --l3: #223;
+  --l4: #334;
   --link: #0af;
   --button: #0af;
   --button-hover: #08f;
   --button-active: #06f;
   --button-outline: #06f8;
-  --text-color: #fff;
+  --text-color: #eef;
 }
 * {
   /* outline: #f00 solid 1px; */
